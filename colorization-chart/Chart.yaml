@@ -1,0 +1,15 @@
+apiVersion: v2
+name: colorization-app
+description: A Helm chart for deploying my SvelteKit/FastAPI application
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+
+dependencies:
+  - name: colorization-backend
+    version: "0.2.0" 
+    repository: "oci://cerit.io/vojtama/colorization"
+
+  - name: colorization-frontend
+    version: "0.2.0"
+    repository: "oci://cerit.io/vojtama/colorization"

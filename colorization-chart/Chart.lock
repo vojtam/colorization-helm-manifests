@@ -1,0 +1,9 @@
+dependencies:
+- name: colorization-backend
+  repository: oci://cerit.io/vojtama/colorization
+  version: 0.2.0
+- name: colorization-frontend
+  repository: oci://cerit.io/vojtama/colorization
+  version: 0.2.0
+digest: sha256:019be6612147756a0313eeabae350257d9de0d962d8cf7953c214748e85f85ac
+generated: "2025-06-27T09:38:56.762550603+02:00"

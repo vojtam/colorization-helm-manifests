@@ -1,0 +1,22 @@
+
+ingress:
+  hostname: colorization.dyn.cloud.e-infra.cz
+  backendPath: /api(/.*)?
+
+global:
+  backendPort: 8000
+
+
+replicaCount: 2
+image:
+  repository: cerit.io/vojtama/cgan-frontend
+  tag: "0.2"
+service:
+  type: ClusterIP    
+  port: 80            
+  targetPort: 3000
+
+selectorLabels:
+  app: frontend
+
+containerPort: 3000

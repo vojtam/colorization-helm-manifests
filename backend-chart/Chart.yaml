@@ -1,0 +1,6 @@
+apiVersion: v2
+name: colorization-backend
+description: A Helm chart for deployment of backend for cGAN colorization application
+type: application
+version: 0.2.0
+appVersion: "1.16.0"

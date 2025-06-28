@@ -1,0 +1,36 @@
+
+ingress:
+  hostname: colorization.dyn.cloud.e-infra.cz
+  tlsSecretName: "colorization.dyn.cloud.e-infra.cz-tls"
+  backendPath: /api
+
+global:
+  backendPort: 8000
+
+
+# Values for the 'backend-chart' subchart
+colorization-backend:
+  replicaCount: 1
+  image:
+    repository: cerit.io/vojtama/cgan-backend
+    tag: "0.4"
+  service:
+    port: 8000
+    targetPort: 8000
+
+  selectorLabels:
+    app: backend
+
+# Values for the 'frontend-chart' subchart
+colorization-frontend:
+  replicaCount: 2
+  image:
+    repository: cerit.io/vojtama/cgan-frontend
+    tag: "0.4"
+  service:
+    type: ClusterIP    
+    port: 80            
+    targetPort: 3000
+
+  selectorLabels:
+    app: frontend
