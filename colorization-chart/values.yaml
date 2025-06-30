@@ -13,7 +13,7 @@ colorization-backend:
   replicaCount: 1
   image:
     repository: cerit.io/vojtama/cgan-backend
-    tag: "0.4"
+    tag: "bab771a"
   service:
     port: 8000
     targetPort: 8000
@@ -26,7 +26,7 @@ colorization-frontend:
   replicaCount: 2
   image:
     repository: cerit.io/vojtama/cgan-frontend
-    tag: "0.4"
+    tag: "d366238"
   service:
     type: ClusterIP    
     port: 80            
