@@ -26,7 +26,7 @@ colorization-frontend:
   replicaCount: 2
   image:
     repository: cerit.io/vojtama/cgan-frontend
-    tag: "9c8fa9d"
+    tag: "863418c"
   service:
     type: ClusterIP    
     port: 80            
